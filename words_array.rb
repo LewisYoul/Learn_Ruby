@@ -16,12 +16,11 @@ puts ' '
 
 words = []
 puts 'Hello, please give me a word: '
-words.push gets.chomp.capitalize
+words.push gets.chomp.downcase
 
 while words.last != ''
   puts 'Another word please: '
-  words.push gets.chomp.capitalize
+  words.push gets.chomp.downcase
 end
 
-puts ' '
-puts 'Your words were: ' + words.sort.join(', ')
+words.pop
